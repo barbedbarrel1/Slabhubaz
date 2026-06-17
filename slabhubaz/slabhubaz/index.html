@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SlabHub AZ — Arizona's Marketplace for Slabs & Remnants</title>
+  <meta name="description" content="Browse premium quartz, marble, granite, and quartzite slabs in Phoenix, AZ. Hand-selected inventory, competitive pricing, open to the public.">
+  <meta name="keywords" content="quartz slabs phoenix az, marble slabs arizona, granite slabs phoenix, stone slabs AZ, slab marketplace arizona">
+  <meta property="og:title" content="SlabHub AZ — Arizona's Marketplace for Slabs">
+  <meta property="og:description" content="Premium slab inventory in Phoenix, AZ. Quartz, marble, granite, and more.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="./index.html" class="nav__logo">
+        <img src="./Images/Slabhubcropped.png" alt="SlabHub AZ" id="nav-logo-img">
+        <span class="nav__logo-fallback" id="nav-logo-text">SLAB<span>HUB</span> AZ</span>
+      </a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="./index.html" class="active">Home</a></li>
+        <li><a href="./inventory.html">Inventory</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+      <a href="./inventory.html" class="nav__cta">Browse Slabs</a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <!-- Add a real showroom photo to assets/hero-bg.jpg to show behind the text -->
+    <div class="hero__bg-img" style="background-image: url('./assets/hero-bg.jpg');"></div>
+    <div class="hero__inner">
+      <div class="hero__eyebrow">Arizona's Marketplace for Slabs &amp; Remnants</div>
+      <h1 class="hero__title">
+        Premium<br>
+        Stone<br>
+        <em>Inventory</em>
+      </h1>
+      <p class="hero__subtitle">
+        Quartz, marble, granite, and quartzite — hand-selected slabs available to the public in Phoenix, AZ.
+      </p>
+      <div class="hero__actions">
+        <a href="./inventory.html" class="btn btn-primary">Browse Inventory</a>
+        <a href="./contact.html" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero__scroll">Scroll</div>
+  </section>
+
+  <!-- ── NEW ARRIVALS ── -->
+  <section class="section section--dark">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px; margin-bottom:40px;">
+        <div>
+          <span class="section__eyebrow">Fresh Stock</span>
+          <h2 class="section__title">Recently <em>Added</em></h2>
+        </div>
+        <a href="./inventory.html" class="btn btn-outline">View All Slabs →</a>
+      </div>
+
+      <div class="slab-grid" id="featured-grid">
+        <!-- Skeleton loaders -->
+        <div class="slab-card" id="sk1"><img src="./Images/Calacatta Carmelo .webp" alt="" srcset=""><div class="skeleton" style="aspect-ratio:4/3;"></div><div style="padding:14px;"><div class="skeleton" style="height:16px;width:65%;margin-bottom:8px;"></div><div class="skeleton" style="height:11px;width:40%;"></div></div></div>
+        <div class="slab-card" id="sk2"><div class="skeleton" style="aspect-ratio:4/3;"></div><div style="padding:14px;"><div class="skeleton" style="height:16px;width:75%;margin-bottom:8px;"></div><div class="skeleton" style="height:11px;width:35%;"></div></div></div>
+        <div class="slab-card" id="sk3"><div class="skeleton" style="aspect-ratio:4/3;"></div><div style="padding:14px;"><div class="skeleton" style="height:16px;width:60%;margin-bottom:8px;"></div><div class="skeleton" style="height:11px;width:45%;"></div></div></div>
+        <div class="slab-card" id="sk4"><div class="skeleton" style="aspect-ratio:4/3;"></div><div style="padding:14px;"><div class="skeleton" style="height:16px;width:70%;margin-bottom:8px;"></div><div class="skeleton" style="height:11px;width:38%;"></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHY SLABHUB ── -->
+  <section class="section section--surface">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:52px;">
+        <span class="section__eyebrow">Why Choose Us</span>
+        <h2 class="section__title">Built for <em>Arizona</em></h2>
+        <p class="section__sub" style="margin:12px auto 0; text-align:center;">Direct access to premium stone — no middlemen, no markup.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">🪨</div>
+          <div class="feature-card__title">Premium Selection</div>
+          <p class="feature-card__text">Carefully sourced quartz, marble, granite, and quartzite. Every slab is photographed so you know exactly what you're getting before you visit.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">📍</div>
+          <div class="feature-card__title">Phoenix-Based</div>
+          <p class="feature-card__text">Local to the Phoenix metro area. Browse online, then come see the slabs in person. No guessing on color, veining, or texture — see it before you commit.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">⚡</div>
+          <div class="feature-card__title">Direct Pricing</div>
+          <p class="feature-card__text">We source direct, so you get competitive pricing on full slabs without retail markup. Open to homeowners, contractors, and designers alike.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA BANNER ── -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-banner__title">New Slabs Added <em style="color:var(--cyan)">Weekly</em></div>
+        <p class="cta-banner__text">Search by material type, color, size, and availability. Every slab has its own page with full photos and specs.</p>
+        <a href="./inventory.html" class="btn btn-primary">Browse Full Inventory</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__logo">
+            <img src="./assets/logo.png" alt="SlabHub AZ" id="footer-logo">
+          </div>
+          <p class="footer__tagline">Arizona's Marketplace for Slabs &amp; Remnants</p>
+        </div>
+        <div class="footer__cols">
+          <div>
+            <div class="footer__col-title">Navigate</div>
+            <ul class="footer__col-links">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./inventory.html">Inventory</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer__col-title">Materials</div>
+            <ul class="footer__col-links">
+              <li><a href="./inventory.html?material=Quartz">Quartz</a></li>
+              <li><a href="./inventory.html?material=Marble">Marble</a></li>
+              <li><a href="./inventory.html?material=Granite">Granite</a></li>
+              <li><a href="./inventory.html?material=Quartzite">Quartzite</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2025 SlabHub AZ. All rights reserved.</span>
+        <a href="./admin.html" class="footer__admin">Admin</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="notification" class="notification"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./js/config.js"></script>
+  <script src="./js/home.js"></script>
+  <script>
+    // Logo fallback
+    document.getElementById('nav-logo-img').onerror = function() {
+      this.style.display = 'none';
+      document.getElementById('nav-logo-text').style.display = 'block';
+    };
+    document.getElementById('footer-logo').onerror = function() { this.style.display = 'none'; };
+
+    // Mobile nav
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      document.getElementById('nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

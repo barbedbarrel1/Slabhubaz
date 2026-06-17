@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading… — SlabHub AZ</title>
+  <meta name="description" content="Slab detail — SlabHub AZ">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="./index.html" class="nav__logo">
+        <img src="./assets/logo.png" alt="SlabHub AZ" id="nav-logo-img">
+        <span class="nav__logo-fallback" id="nav-logo-text">SLAB<span>HUB</span> AZ</span>
+      </a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./inventory.html" class="active">Inventory</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+      <a href="./inventory.html" class="nav__cta">Browse Slabs</a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── SLAB DETAIL ── -->
+  <div class="container">
+
+    <!-- Loading state -->
+    <div id="slab-loading" style="padding: 120px 0; text-align: center;">
+      <div style="display:inline-flex; flex-direction:column; align-items:center; gap:16px; color:var(--grey); font-size:14px;">
+        <div class="skeleton" style="width:80px; height:80px; border-radius:50%;"></div>
+        Loading slab…
+      </div>
+    </div>
+
+    <!-- Content (hidden until loaded) -->
+    <div id="slab-content" style="display:none;">
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="./index.html">Home</a>
+        <span>/</span>
+        <a href="./inventory.html">Inventory</a>
+        <span>/</span>
+        <span id="breadcrumb-name" style="color:var(--white-dim);">—</span>
+      </div>
+
+      <div class="slab-detail">
+
+        <!-- Gallery -->
+        <div>
+          <div class="gallery__main">
+            <img id="gallery-main" src="" alt="Slab image">
+          </div>
+          <div class="gallery__thumbs" id="gallery-thumbs"></div>
+        </div>
+
+        <!-- Info -->
+        <div>
+          <div class="slab-info__eyebrow" id="slab-type">—</div>
+          <h1 class="slab-info__name" id="slab-name">—</h1>
+          <div class="slab-info__price" id="slab-price" style="display:none;"></div>
+
+          <!-- Specs grid -->
+          <div class="slab-specs">
+            <div class="slab-spec">
+              <div class="slab-spec__label">Material</div>
+              <div class="slab-spec__value" id="spec-material">—</div>
+            </div>
+            <div class="slab-spec">
+              <div class="slab-spec__label">Color</div>
+              <div class="slab-spec__value" id="spec-color">—</div>
+            </div>
+            <div class="slab-spec">
+              <div class="slab-spec__label">Thickness</div>
+              <div class="slab-spec__value" id="spec-thickness">—</div>
+            </div>
+            <div class="slab-spec">
+              <div class="slab-spec__label">Size</div>
+              <div class="slab-spec__value" id="spec-size">—</div>
+            </div>
+            <div class="slab-spec">
+              <div class="slab-spec__label">Finish</div>
+              <div class="slab-spec__value" id="spec-finish">—</div>
+            </div>
+            <div class="slab-spec">
+              <div class="slab-spec__label">Availability</div>
+              <div class="slab-spec__value" id="spec-availability">—</div>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <p class="slab-desc" id="slab-description" style="display:none;"></p>
+
+          <!-- CTA buttons -->
+          <div class="slab-cta">
+            <a id="contact-btn" href="./contact.html" class="btn btn-primary btn-full">
+              <!-- Phone icon -->
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              Contact About This Slab
+            </a>
+            <a href="./inventory.html" class="btn btn-ghost btn-full">← Back to Inventory</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Related Slabs -->
+      <div id="related-section" style="display:none; padding-bottom: 80px;">
+        <div style="margin-bottom: 28px; border-top: 1px solid var(--border); padding-top: 52px;">
+          <span class="section__eyebrow">More Like This</span>
+          <h2 class="section__title">Related <em>Slabs</em></h2>
+        </div>
+        <div class="slab-grid" id="related-grid"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__logo">
+            <img src="./assets/logo.png" alt="SlabHub AZ" id="footer-logo">
+          </div>
+          <p class="footer__tagline">Arizona's Marketplace for Slabs &amp; Remnants</p>
+        </div>
+        <div class="footer__cols">
+          <div>
+            <div class="footer__col-title">Navigate</div>
+            <ul class="footer__col-links">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./inventory.html">Inventory</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2025 SlabHub AZ. All rights reserved.</span>
+        <a href="./admin.html" class="footer__admin">Admin</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./js/config.js"></script>
+  <script src="./js/slab.js"></script>
+  <script>
+    document.getElementById('nav-logo-img').onerror = function() {
+      this.style.display = 'none';
+      document.getElementById('nav-logo-text').style.display = 'block';
+    };
+    document.getElementById('footer-logo').onerror = function() { this.style.display = 'none'; };
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      document.getElementById('nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
