@@ -633,8 +633,9 @@ input, select, textarea { font-family: inherit; }
 }
 
 @media (max-width: 768px) {
-  .nav__inner { height: 100px; }
-  .nav__logo img { height: 80px; }
+  .nav { backdrop-filter: none; }
+  .nav__inner { height: 100px !important; }
+  .nav__logo img { height: 80px !important; width: auto !important; }
   .nav__links, .nav__cta { display: none; }
   .nav__toggle { display: flex; }
   .nav__links.open {
