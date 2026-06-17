@@ -633,13 +633,13 @@ input, select, textarea { font-family: inherit; }
 }
 
 @media (max-width: 768px) {
-  .nav__inner { height: 64px; }
-  .nav__logo img { height: 44px; }
+  .nav__inner { height: 100px; }
+  .nav__logo img { height: 80px; }
   .nav__links, .nav__cta { display: none; }
   .nav__toggle { display: flex; }
   .nav__links.open {
     display: flex; flex-direction: column; align-items: flex-start;
-    position: fixed; inset: 64px 0 0;
+    position: fixed; inset: 100px 0 0;
     background: rgba(8,8,8,0.98); padding: 32px 24px;
     gap: 22px; z-index: 99; overflow-y: auto;
   }
