@@ -34,6 +34,7 @@
       </button>
     </div>
   </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
 
   <!-- ── HERO ── -->
   <section class="hero">
@@ -124,7 +125,7 @@
       <div class="footer__top">
         <div>
           <div class="footer__logo">
-            <img src="./assets/logo.png" alt="SlabHub AZ" id="footer-logo">
+            <img src="./Images/Slabhubcropped.png" alt="SlabHub AZ" id="footer-logo">
           </div>
           <p class="footer__tagline">Arizona's Marketplace for Slabs &amp; Remnants</p>
         </div>
@@ -169,9 +170,15 @@
     document.getElementById('footer-logo').onerror = function() { this.style.display = 'none'; };
 
     // Mobile nav
-    document.getElementById('nav-toggle').addEventListener('click', function() {
-      document.getElementById('nav-links').classList.toggle('open');
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks  = document.getElementById('nav-links');
+    const navOverlay = document.getElementById('nav-overlay');
+    function closeNav() { navLinks.classList.remove('open'); navOverlay.classList.remove('open'); }
+    navToggle.addEventListener('click', function() {
+      const isOpen = navLinks.classList.toggle('open');
+      navOverlay.classList.toggle('open', isOpen);
     });
+    navOverlay.addEventListener('click', closeNav);
   </script>
 </body>
 </html>

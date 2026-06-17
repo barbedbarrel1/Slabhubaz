@@ -16,7 +16,7 @@
   <nav class="nav">
     <div class="nav__inner">
       <a href="./index.html" class="nav__logo">
-        <img src="./assets/logo.png" alt="SlabHub AZ" id="nav-logo-img">
+        <img src="./Images/Slabhubcropped.png" alt="SlabHub AZ" id="nav-logo-img">
         <span class="nav__logo-fallback" id="nav-logo-text">SLAB<span>HUB</span> AZ</span>
       </a>
       <ul class="nav__links" id="nav-links">
@@ -30,6 +30,7 @@
       </button>
     </div>
   </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
 
   <!-- ── SLAB DETAIL ── -->
   <div class="container">
@@ -132,7 +133,7 @@
       <div class="footer__top">
         <div>
           <div class="footer__logo">
-            <img src="./assets/logo.png" alt="SlabHub AZ" id="footer-logo">
+            <img src="./Images/Slabhubcropped.png" alt="SlabHub AZ" id="footer-logo">
           </div>
           <p class="footer__tagline">Arizona's Marketplace for Slabs &amp; Remnants</p>
         </div>
@@ -163,9 +164,15 @@
       document.getElementById('nav-logo-text').style.display = 'block';
     };
     document.getElementById('footer-logo').onerror = function() { this.style.display = 'none'; };
-    document.getElementById('nav-toggle').addEventListener('click', function() {
-      document.getElementById('nav-links').classList.toggle('open');
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks  = document.getElementById('nav-links');
+    const navOverlay = document.getElementById('nav-overlay');
+    function closeNav() { navLinks.classList.remove('open'); navOverlay.classList.remove('open'); }
+    navToggle.addEventListener('click', function() {
+      const isOpen = navLinks.classList.toggle('open');
+      navOverlay.classList.toggle('open', isOpen);
     });
+    navOverlay.addEventListener('click', closeNav);
   </script>
 </body>
 </html>
