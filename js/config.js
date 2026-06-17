@@ -13,4 +13,6 @@ const SUPABASE_ANON_KEY = 'sb_publishable_NwnehUlgBrmrdlNxLlPR-w_vOS82son';
 
 // Initialize the Supabase client
 const { createClient } = supabase;
-const db = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const db = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+  auth: { storage: window.sessionStorage, persistSession: true }
+});

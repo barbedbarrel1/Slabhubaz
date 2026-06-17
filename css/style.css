@@ -604,6 +604,25 @@ input, select, textarea { font-family: inherit; }
 .footer__admin { font-size: 11px; color: var(--grey); transition: color var(--ease); }
 .footer__admin:hover { color: var(--cyan); }
 
+/* ── Admin Mobile Nav ────────────────── */
+.admin-mobile-nav {
+  display: none;
+  align-items: center; justify-content: space-between;
+  padding: 12px 16px; gap: 8px; flex-wrap: wrap;
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 50;
+}
+.admin-mobile-nav__links { display: flex; gap: 6px; flex-wrap: wrap; }
+.admin-mobile-nav__btn {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 8px 14px; border-radius: var(--radius);
+  border: 1px solid var(--border); color: var(--white-dim);
+  background: none; cursor: pointer; transition: all var(--ease);
+}
+.admin-mobile-nav__btn:hover { border-color: var(--cyan); color: var(--cyan); }
+.admin-mobile-nav__btn--danger { border-color: rgba(248,113,113,0.25); color: #f87171; }
+.admin-mobile-nav__btn--danger:hover { background: rgba(248,113,113,0.1); }
+
 /* ── Responsive ──────────────────────── */
 @media (max-width: 1024px) {
   .slab-grid { grid-template-columns: repeat(3, 1fr); }
@@ -619,12 +638,13 @@ input, select, textarea { font-family: inherit; }
   .nav__links, .nav__cta { display: none; }
   .nav__toggle { display: flex; }
   .nav__links.open {
-    display: flex; flex-direction: column;
+    display: flex; flex-direction: column; align-items: flex-start;
     position: fixed; inset: 64px 0 0;
     background: rgba(8,8,8,0.98); padding: 32px 24px;
     gap: 22px; z-index: 99; overflow-y: auto;
   }
-  .nav__links.open a { font-size: 17px; }
+  .nav__links.open li { width: 100%; }
+  .nav__links.open a { font-size: 17px; color: var(--white); display: block; }
   .nav-overlay {
     display: none; position: fixed; inset: 0; z-index: 98;
   }
@@ -639,6 +659,7 @@ input, select, textarea { font-family: inherit; }
   .features-grid { grid-template-columns: 1fr; }
   .admin-page { grid-template-columns: 1fr; }
   .admin-sidebar { display: none; }
+  .admin-mobile-nav { display: flex; }
   .admin-main { padding: 24px 16px; }
   .form-row { grid-template-columns: 1fr; }
   .preview-grid { grid-template-columns: repeat(3, 1fr); }
