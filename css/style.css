@@ -586,7 +586,7 @@ input, select, textarea { font-family: inherit; }
   display: flex; justify-content: space-between; align-items: flex-start;
   gap: 40px; margin-bottom: 44px; flex-wrap: wrap;
 }
-.footer__logo img { height: 38px; margin-bottom: 12px; }
+.footer__logo img { height: 70px; width: auto; margin-bottom: 12px; }
 .footer__tagline { font-size: 11px; color: var(--grey); letter-spacing: 0.07em; text-transform: uppercase; }
 .footer__cols { display: flex; gap: 52px; flex-wrap: wrap; }
 .footer__col-title {
